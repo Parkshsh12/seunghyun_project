@@ -258,46 +258,46 @@ body {
 
 /* collection section start */
 .second-container{
-    height: 3000px;
+    /* height: 3000px; */
 }
 
-.collection-section{
+.second-container > .collection-section{
     text-align: center;
     max-width: 1600px;
     margin: 0 auto;
 }
-.collection-section .collection-title{
+.second-container > .collection-section > .collection-title{
     font-size: 3em;
     text-align: center;
     color: white;
     padding: 70px 0;
     transition: all 0.2s;
 }
-.collection-section .collection-title:hover{
+.second-container > .collection-section .collection-title:hover{
     color: burlywood;
 }
 
-.collection-list{
+.second-container > .collection-section > .collection-list{
     display: flex;
     justify-content: space-between;
 }
-.collection-item{
+.second-container > .collection-section > .collection-list > .collection-item{
     position: relative;
     width: 24%;
     height: 34%;
 }
-.collection-item > a{
+.second-container > .collection-section > .collection-list > .collection-item > a{
     display: block;
     width: 100%;
     height: 100%;
 }
 
-.collection-item > a > img{
+.second-container > .collection-section > .collection-list > .collection-item > a > img{
     width: 100%;
     height: 100%;
 }
 
-.clothe-desc{
+.second-container > .collection-section > .collection-list > .collection-item > .clothe > .clothe-desc{
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -313,7 +313,7 @@ body {
     font-size: 20px;
     transition: all 300ms ease;
 }
-.clothe:hover .clothe-desc{
+.second-container > .collection-section > .collection-list > .collection-item > .clothe:hover .clothe-desc{
     opacity: 0.6;
     color: #ffffff;
 }
@@ -321,7 +321,15 @@ body {
 /* collection section end */
 
 /* collaboration section start */
-.collabo-title{
+.second-container > .collabo-section{
+    position: relative;
+    max-width: 1600px;
+    margin: 30px auto 80px;
+}
+.second-container > .collabo-section > input {
+    display: none;
+}
+.second-container > .collabo-section > .collabo-title{
     font-size: 3em;
     text-align: center;
     color: white;
@@ -329,24 +337,64 @@ body {
     transition: all 0.2s;
 }
 
-.collabo-title:hover{
+.second-container > .collabo-section > .collabo-title:hover{
     color: burlywood;
 }
 
-.collabo-section{
-    max-width: 1600px;
-    margin: 30px auto;
+.second-container > .collabo-section > .collabo-nav{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+.second-container > .collabo-section > .collabo-nav > label {
+    background-color: #ffffff;
+    width: 20%;
+    height: 20%;
+    border: 1px solid black;
+    padding: 0 30px;
+    cursor: pointer;
+}
+.second-container > .collabo-section > .colla-wrap > .list{
+    display: none;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px 30px;
+}
+.second-container > .collabo-section > #collabo-1:checked ~ .colla-wrap > .colla-list-1,
+.second-container > .collabo-section > #collabo-2:checked ~ .colla-wrap > .colla-list-2,
+.second-container > .collabo-section > #collabo-3:checked ~ .colla-wrap > .colla-list-3{
+    display: block;
+}
+.second-container > .collabo-section > .colla-wrap{
+    display: flex;
+    justify-content: center;
+}
+.second-container > .collabo-section > .colla-wrap > .list > a{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.second-container > .collabo-section > .colla-wrap > .list > a > img{
+    width: 100%;
+    height: 100%;
+    border-radius: 4% 20%;
 }
 /* collaboration section end */
+
+
 /* tap section start */
 .tap{
     padding: 30px 0;
     background-color: white;
-    height: 1700px;
-
+    height: 1400px;
 }
 
-input[type=radio]{
+.tap > .inner-tap > input[type=radio]{
     display: none;
 }
 .tap > .inner-tap{
@@ -380,49 +428,45 @@ input[type=radio]{
     background-color: #000000;
 }
 
-.tap > .inner-tap > .inner-section > .content{
+.tap > .inner-tap > .inner-section{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    overflow: scroll;
+    max-width: 1600px;
+    max-height: 1000px;
+
+}
+
+.tap > .inner-tap > .inner-section > .content-all{
     display: none;
 }
 
 
-.tap > .inner-tap > #all:checked ~ .inner-section > .tap-content-1,
-.tap > .inner-tap > #outer:checked ~ .inner-section > .tap-content-2,
-.tap > .inner-tap > #top:checked ~ .inner-section > .tap-content-3,
-.tap > .inner-tap > #bottom:checked ~ .inner-section > .tap-content-4,
-.tap > .inner-tap > #acc:checked ~ .inner-section > .tap-content-5{
+.tap > .inner-tap > #all:checked ~ .inner-section > .content-all,
+.tap > .inner-tap > #outer:checked ~ .inner-section > .content-outer,
+.tap > .inner-tap > #top:checked ~ .inner-section > .content-top,
+.tap > .inner-tap > #bottom:checked ~ .inner-section > .content-bottom,
+.tap > .inner-tap > #acc:checked ~ .inner-section > .content-acc{
     display: block;
 }
-.tap > .inner-tap > .inner-section{
-
-}
-.tap > .inner-tap > .inner-section > .content{
-    -ms-overflow-style: none;
-    overflow: auto;
-    max-width: 1600px;
-    height: 1500px;
-}
-.tap > .inner-tap > .inner-section > .content > ul{
-    display: flex;
-    justify-content: start;
-    flex-wrap: wrap;
-}
-
-.tap > .inner-tap > .inner-section > .content > ul > li{
+.tap > .inner-tap > .inner-section > .content-all{
     position: relative;
     margin: 8px 8px;
     width: 24%;
     height: 34%;
 }
-.tap > .inner-tap > .inner-section > .content > ul > li > a{
+
+.tap > .inner-tap > .inner-section > .content-all > a{
     display: block;
     width: 100%;
     height: 100%;
 }
-.tap > .inner-tap > .inner-section > .content > ul > li > a > img{
+.tap > .inner-tap > .inner-section > .content-all > a > img{
     width: 100%;
     height: 100%;
 }
-.tap > .inner-tap > .inner-section > .content > ul > li > a > div{
+.tap > .inner-tap > .inner-section > .content-all > a > div{
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -438,10 +482,10 @@ input[type=radio]{
     font-size: 20px;
     transition: all 300ms ease;
 }
-.tap > .inner-tap > .inner-section > .content > ul > li > a:hover .item-desc{
+.tap > .inner-tap > .inner-section > .content-all > a:hover .item-desc{
     color: white;
     opacity: 0.7;
 }
-.tap > .inner-tap > .inner-section > .content > ul > li > a > div > h3{
+.tap > .inner-tap > .inner-section > .content-all > a > div > h3{
     margin-bottom: 8px;
 }
