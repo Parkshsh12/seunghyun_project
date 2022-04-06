@@ -124,7 +124,6 @@ body {
 .container > .slide-section > input[id*="slide"] {
     display:none;
 }
-/* id가 slide인 요소들은 안보이게설정 */
 .container > .slide-section > .slide-wrap {
     max-width:1460px;
     margin:0 auto;
@@ -150,9 +149,7 @@ body {
     display:block;
     position:relative;
 }
-.container > .slide-section > .slide-wrap > .slide-list > li > a img {
-    width:100%;
-}
+
 .container > .slide-section > .slide-wrap > .slide-list > .slide-control > div > label {
     position:absolute;
     z-index:10;
@@ -307,7 +304,7 @@ body {
     background-color: #000000;
     color: black;
     opacity: 0;
-    font-size: 20px;
+    font-size: 1.4em;
     transition: all 300ms ease;
 }
 .second-container > .collection-section > .collection-list > .collection-item > .clothe:hover .clothe-desc{
@@ -323,9 +320,10 @@ body {
     max-width: 1600px;
     margin: 30px auto 80px;
 }
-.second-container > .collabo-section > input {
+.second-container > .collabo-section > input{
     display: none;
 }
+
 .second-container > .collabo-section > .collabo-title{
     font-size: 3em;
     text-align: center;
@@ -333,62 +331,106 @@ body {
     padding: 70px 0;
     transition: all 0.2s;
 }
-
 .second-container > .collabo-section > .collabo-title:hover{
     color: burlywood;
 }
 
-.second-container > .collabo-section > .collabo-nav{
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    top: 50%;
-    transform: translateY(-25%);
-    z-index: 1;
-}
-.second-container > .collabo-section > .collabo-nav > label {
-    background-color: #ffffff;
-    width: 20%;
-    height: 20%;
-    margin: 50px;
-    border: 1px solid black;
-    cursor: pointer;
-}
-.second-container > .collabo-section > .colla-wrap > .list{
-    display: none;
-    width: 100%;
-    height: 100%;
-    border-radius: 5px 30px;
-}
-.second-container > .collabo-section > #collabo-1:checked ~ .colla-wrap > .colla-list-1,
-.second-container > .collabo-section > #collabo-2:checked ~ .colla-wrap > .colla-list-2,
-.second-container > .collabo-section > #collabo-3:checked ~ .colla-wrap > .colla-list-3{
-    display: block;
-}
 .second-container > .collabo-section > .colla-wrap{
-    display: flex;
-    justify-content: center;
-}
-.second-container > .collabo-section > .colla-wrap > .list > a{
     position: relative;
+    width: 100%;
+    overflow: hidden;
+    background-color: #ffffff;
+    border-radius: 40px;
+}
+
+.second-container > .collabo-section > .colla-wrap > .colla-list{
+    height: 800px;
+}
+.second-container > .collabo-section > .colla-wrap > .colla-list > li{
+    color: #000000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    padding: 24px;
+    transition:all .5s;
+}
+
+.second-container > .collabo-section > .colla-wrap > .colla-list > li > a{
     display: block;
-    width: 100%;
-    height: 100%;
+    width: 55%;
+    border-radius: 50px;
+    
 }
-.second-container > .collabo-section > .colla-wrap > .list > a > img{
+
+.second-container > .collabo-section > .colla-wrap > .colla-list > li > a >img{
+    margin-bottom: 20px;
     width: 100%;
-    height: 100%;
-    border-radius: 4% 20%;
+    border-radius: 50px;
+    box-shadow: 3px 3px 3px;
+    
 }
+
+.second-container > .collabo-section > .colla-wrap > .colla-list > li > div{
+    padding: 12px;
+    margin: 0 100px;
+    border-radius: 50px;
+    transition: all 0.5s;
+}
+
+.second-container > .collabo-section > .colla-wrap > .colla-list > li > div:hover {
+    display: block;
+    box-shadow: 3px 3px 3px;
+    background-color: gainsboro;
+}
+
+.second-container > .collabo-section > .colla-wrap > .colla-list > li > div > h2{
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.second-container > .collabo-section > input[id=collabo-1]:checked ~ .colla-wrap > .colla-list > li{
+    transform: translateY(0);
+}
+.second-container > .collabo-section > input[id=collabo-2]:checked ~ .colla-wrap > .colla-list > li{
+    transform: translateY(-100%);
+}
+.second-container > .collabo-section > input[id=collabo-3]:checked ~ .colla-wrap > .colla-list > li{
+    transform: translateY(-200%);
+}
+.second-container > .collabo-section > .colla-wrap > .collabo-nav{
+    position: absolute;
+    color: #000000;
+    top: 50%;
+    right: 2%;
+    transform: translateY(-50%);
+}
+.second-container > .collabo-section > .colla-wrap > .collabo-nav > label{
+    display: block;
+    background-color: #000000;
+    padding: 10px;
+    border-radius: 50%;
+    opacity: 0.3;
+    margin: 80px 0px;
+    transition: all 0.3s;
+}
+.second-container > .collabo-section > .colla-wrap > .collabo-nav > label:hover{
+    opacity: 0.7;
+}
+
 /* collaboration section end */
 
 
 /* tap section start */
+
+
 .tap{
     padding: 30px 0;
     background-color: white;
-    height: 1400px;
+    height: 1500px;
+    margin: 30px auto;
 }
 
 .tap > .inner-tap > input[type=radio]{
@@ -396,7 +438,7 @@ body {
 }
 .tap > .inner-tap{
     color: #000000;
-    width: 1600px;
+    max-width: 1600px;
     margin: 30px auto;
 }
 
@@ -431,8 +473,9 @@ body {
     flex-wrap: wrap;
     overflow: scroll;
     max-width: 1600px;
-    max-height: 1000px;
-
+    max-height: 1200px;
+    border-radius: 10px 10px 100px 10px;
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.7);
 }
 
 .tap > .inner-tap > .inner-section > .content-all{
@@ -450,8 +493,8 @@ body {
 .tap > .inner-tap > .inner-section > .content-all{
     position: relative;
     margin: 8px 8px;
-    width: 24%;
-    height: 34%;
+    max-width: 24%;
+    max-height: 34%;
 }
 
 .tap > .inner-tap > .inner-section > .content-all > a{
@@ -465,18 +508,18 @@ body {
 }
 .tap > .inner-tap > .inner-section > .content-all > a > div{
     position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
     background-color: #000000;
     color: black;
     opacity: 0;
-    font-size: 20px;
+    font-size: 1.4em;
     transition: all 300ms ease;
 }
 .tap > .inner-tap > .inner-section > .content-all > a:hover .item-desc{
@@ -485,4 +528,109 @@ body {
 }
 .tap > .inner-tap > .inner-section > .content-all > a > div > h3{
     margin-bottom: 8px;
+}
+/* tap section end */
+/* magazine start */
+.magazine{
+    padding: 30px 0;
+    max-width: 1600px;
+    margin: 30px auto;
+}
+
+.magazine > .magazine-title{
+    font-size: 3em;
+    text-align: center;
+    color: white;
+    padding: 70px 0;
+    transition: all 0.2s;
+}
+.magazine > .magazine-title:hover{
+    color: burlywood;
+}
+/* magazine end */
+.footer-section{
+    border-top: 4px solid white;
+    padding: 100px 0;
+}
+.footer-section > .footer-container{
+    max-width: 1600px;
+    margin: 0 auto;
+}
+.footer-section > .footer-container > .footer-main{
+    display: flex;
+    justify-content: space-around;
+}
+.footer-section > .footer-container > .footer-main > .footer-contactus > .contactus-item{
+    display :flex;
+    flex-direction: column;
+}
+
+
+.footer-section > .footer-container > .footer-main > .footer-contactus > h3{
+    font-size: 2em;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.footer-section > .footer-container > .footer-main > .footer-contactus > .contactus-item{
+    font-size: 1.4em;
+}
+.footer-section > .footer-container > .footer-main > .footer-contactus > .contactus-item > a{
+    margin-bottom: 3%;
+    color: #ffffff;
+    transition: all 0.3s;
+}
+.footer-section > .footer-container > .footer-main > .footer-contactus > .contactus-item > a:hover{
+    color: burlywood;
+}
+.footer-section > .footer-container > .footer-main > .footer-contactus > .contactus-item > a > span{
+    margin-left: 10px;
+
+}
+
+.footer-section > .footer-container > .footer-main > .footer-social{
+    text-align: center;
+}
+.footer-section > .footer-container > .footer-main > .footer-social > h3{
+    font-size: 2em;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.footer-section > .footer-container > .footer-main > .footer-social > p{
+    margin-bottom: 3%;
+    font-size: 1.4em;
+    color: #ffffff;
+}
+.footer-section > .footer-container > .footer-main > .footer-social > .social{
+    font-size: 2em;
+}
+.footer-section > .footer-container > .footer-main > .footer-social > .social > a{
+    margin: 0 4%;
+    color: #ffffff;
+    transition: all 0.3s;
+}
+.footer-section > .footer-container > .footer-main > .footer-social > .social > a:hover{
+    color: burlywood;
+}
+
+.footer-section > .footer-container > .footer-main > .opening > h3{
+    font-size: 2em;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.footer-section > .footer-container > .footer-main > .opening{
+    text-align: center;
+}
+.footer-section > .footer-container > .footer-main > .opening > p{
+    margin-bottom: 3%;
+    font-size: 1.4em;
+    color: #ffffff;
+}
+.footer-section > .footer-container > .footer-desc{
+    margin-top: 3%;
+    text-align: center;
+    font-size: 1.6em;
+}
+.footer-section > .footer-container > .footer-desc > p:nth-child(1){
+    margin-bottom: 2%;
 }
