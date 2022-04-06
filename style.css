@@ -158,11 +158,21 @@ body {
     padding:50px;
     cursor:pointer;
 }
-.container > .slide-section > .slide-wrap > .slide-list > .slide-item > .text-box{
-    position:fixed;
+
+.container > .slide-section > .slide-wrap > .slide-list > .slide-item > .item-desc{
+    position: absolute;
     z-index: 20;
-    left: 20%;
-	bottom: 20%;
+    bottom: 20%;
+    left: 5%;
+    font-size: 56px;
+    font-weight: 900;
+}
+
+.container > .slide-section > .slide-wrap > .slide-list > .slide-item > .text-box{
+    position:absolute;
+    z-index: 20;
+    left: 5%;
+	bottom: 10%;
 }
 .container > .slide-section > .slide-wrap > .slide-list > .slide-item > p > a{
     color: white;
@@ -427,10 +437,10 @@ body {
 
 
 .tap{
-    padding: 30px 0;
+    padding: 50px;
     background-color: white;
     height: 1500px;
-    margin: 30px auto;
+    margin: 0 auto;
 }
 
 .tap > .inner-tap > input[type=radio]{
@@ -455,7 +465,11 @@ body {
     border-radius: 15px;
     background-color: #ffffff;
     cursor: pointer;
-    transition: all 0.2s;
+    transition: all 0.3s;
+}
+.tap > .inner-tap > .tap-nav > label:hover{
+    background-color: #000000;
+    color: #ffffff;
 }
 
 .tap > .inner-tap > #all:checked ~ .tap-nav > .all,
@@ -531,22 +545,94 @@ body {
 }
 /* tap section end */
 /* magazine start */
-.magazine{
-    padding: 30px 0;
+
+.about-contact{
+    /* padding: 50px 0; */
     max-width: 1600px;
-    margin: 30px auto;
+    height: 900px;
+    margin: 100px auto;
 }
 
-.magazine > .magazine-title{
-    font-size: 3em;
+.about-contact > .about-contact-container > .about-contact-nav{
+    display: flex;
+    justify-content: center;
     text-align: center;
+    margin: 0 auto 100px;
+}
+.about-contact > .about-contact-container > .about-contact-nav > label{
+    font-size: 3em;
     color: white;
-    padding: 70px 0;
-    transition: all 0.2s;
+    padding: 1% 2%;
+    font-weight: 700;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
 }
-.magazine > .magazine-title:hover{
-    color: burlywood;
+.about-contact > .about-contact-container > .about-contact-nav > label:hover{
+    background-color: #ffffff;
+    color: #000000;
 }
+.about-contact > .about-contact-container > #about:checked ~ .about-contact-nav > .about,
+.about-contact > .about-contact-container > #contact:checked ~ .about-contact-nav > .contact{
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.about-contact > .about-contact-container >.about-contact-list > .contact-item{
+    margin: 50px 0;
+    text-align: center;
+}
+
+.about-contact > .about-contact-container >.about-contact-list > .contact-item > ul > li > p{
+    font-size: 1.4em;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+.about-contact > .about-contact-container >.about-contact-list > .contact-item > ul > li{
+    margin-bottom: 100px;
+}
+
+.about-contact > .about-contact-container >.about-contact-list > .contact-item > ul > li >  .title{
+    font-size: 1.4em;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.about-contact > .about-contact-container > input{
+    display: none;
+}
+.about-contact > .about-contact-container > .about-contact-list > .item{
+    display: none;
+}
+.about-contact > .about-contact-container > #about:checked ~ .about-contact-list>.about-item,
+.about-contact > .about-contact-container > #contact:checked ~ .about-contact-list>.contact-item{
+    display: block;
+}
+.about-contact > .about-contact-container > .about-contact-list > .about-item > .img-banner{
+    display: flex;
+}
+.about-contact > .about-contact-container > .about-contact-list > .about-item > .img-banner > .left{
+    max-width: 50%;
+    padding-right: 2%;
+    border-right: 1px solid gainsboro;
+}
+.about-contact > .about-contact-container > .about-contact-list > .about-item > .img-banner > .left > img{
+    width: 100%;
+}
+.about-contact > .about-contact-container > .about-contact-list > .about-item > .img-banner > .right{
+    padding-left: 2%;
+    border-left: 1px solid gainsboro;
+    max-width: 50%;
+}
+.about-contact > .about-contact-container > .about-contact-list > .about-item > .img-banner > .right > div > .title{
+    font-weight: 700;
+}
+.about-contact > .about-contact-container > .about-contact-list > .about-item > .img-banner > .right > div > p{
+    font-size: 1.4em;
+    line-height: 1em;
+    font-weight: 300;
+}
+
 /* magazine end */
 .footer-section{
     border-top: 4px solid white;
