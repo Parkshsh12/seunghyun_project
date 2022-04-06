@@ -25,6 +25,33 @@ body {
     background-size: cover;
     background-attachment: fixed;
 }
+/* top start */
+.top-page{
+    position: fixed;
+    z-index: 10000;
+    width: 60px;
+    height: 80px;
+    right: 0.5%;
+    bottom: 30%;
+    background-color: #000000;
+    border-radius: 1em;
+    opacity: 0.5;
+    transition: all 0.3s;
+}
+.top-page > img{
+    width: 100%;
+    height: 100%;
+    filter: brightness(0) invert(1);
+    transition: all 0.3s;
+}
+.top-page:hover{
+    opacity: 0.5;
+    background-color: #ffffff;
+}
+.top-page > img:hover{
+    filter: brightness(0) invert(0);
+}
+/* top end */
 
 /* *****navbar***** */
 .container > .navbar{
