@@ -439,6 +439,12 @@ body {
 .second-container > .collabo-section > input[id=collabo-3]:checked ~ .colla-wrap > .colla-list > li{
     transform: translateY(-200%);
 }
+
+.second-container > .collabo-section > input[id=collabo-1]:checked ~ .colla-wrap > .collabo-nav > .coll-1,
+.second-container > .collabo-section > input[id=collabo-2]:checked ~ .colla-wrap > .collabo-nav > .coll-2,
+.second-container > .collabo-section > input[id=collabo-3]:checked ~ .colla-wrap > .collabo-nav > .coll-3{
+    opacity: 0.7;
+}
 .second-container > .collabo-section > .colla-wrap > .collabo-nav{
     position: absolute;
     color: #000000;
