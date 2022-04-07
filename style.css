@@ -4,6 +4,9 @@
     padding: 0; 
     box-sizing: border-box;
 }
+html{
+    scroll-behavior: smooth;
+}
 li {
     list-style: none;
 }
@@ -386,7 +389,7 @@ body {
 .second-container > .collabo-section > .colla-wrap > .colla-list > li{
     color: #000000;
     display: flex;
-    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
     text-align: center;
     width: 100%;
@@ -397,31 +400,26 @@ body {
 
 .second-container > .collabo-section > .colla-wrap > .colla-list > li > a{
     display: block;
-    width: 55%;
-    border-radius: 50px;
-    
+    width: 60%;
+    padding: 0 2%;
+    border-right: 1px solid black;
 }
 
 .second-container > .collabo-section > .colla-wrap > .colla-list > li > a >img{
-    margin-bottom: 20px;
     width: 100%;
-    border-radius: 50px;
-    box-shadow: 3px 3px 3px;
-    
 }
 
 .second-container > .collabo-section > .colla-wrap > .colla-list > li > div{
-    padding: 12px;
-    margin: 0 100px;
+    width: 40%;
+    padding: 0 4%;
     border-radius: 50px;
-    transition: all 0.5s;
 }
 
-.second-container > .collabo-section > .colla-wrap > .colla-list > li > div:hover {
-    display: block;
-    box-shadow: 3px 3px 3px;
-    background-color: gainsboro;
+.second-container > .collabo-section > .colla-wrap > .colla-list > li > div > h1{
+    margin-bottom: 10%;
 }
+
+
 
 .second-container > .collabo-section > .colla-wrap > .colla-list > li > div > h2{
     font-weight: 700;
@@ -573,88 +571,89 @@ body {
 /* tap section end */
 /* magazine start */
 
-.about-contact{
+#about-contact{
     /* padding: 50px 0; */
     max-width: 1600px;
     height: 900px;
     margin: 100px auto;
 }
 
-.about-contact > .about-contact-container > .about-contact-nav{
+#about-contact > .about-contact-container > .about-contact-nav{
     display: flex;
     justify-content: center;
     text-align: center;
     margin: 0 auto 100px;
 }
-.about-contact > .about-contact-container > .about-contact-nav > label{
+#about-contact > .about-contact-container > .about-contact-nav > label{
     font-size: 3em;
     color: white;
+    margin: 1%;
     padding: 1% 2%;
     font-weight: 700;
     border-radius: 20px;
     cursor: pointer;
     transition: all 0.3s;
 }
-.about-contact > .about-contact-container > .about-contact-nav > label:hover{
+#about-contact > .about-contact-container > .about-contact-nav > label:hover{
     background-color: #ffffff;
     color: #000000;
 }
-.about-contact > .about-contact-container > #about:checked ~ .about-contact-nav > .about,
-.about-contact > .about-contact-container > #contact:checked ~ .about-contact-nav > .contact{
+#about-contact > .about-contact-container > #about:checked ~ .about-contact-nav > .about,
+#about-contact > .about-contact-container > #contact:checked ~ .about-contact-nav > .contact{
     background-color: #ffffff;
     color: #000000;
 }
 
-.about-contact > .about-contact-container >.about-contact-list > .contact-item{
+#about-contact > .about-contact-container >.about-contact-list > .contact-item{
     margin: 50px 0;
     text-align: center;
 }
 
-.about-contact > .about-contact-container >.about-contact-list > .contact-item > ul > li > p{
+#about-contact > .about-contact-container >.about-contact-list > .contact-item > ul > li > p{
     font-size: 1.4em;
     font-weight: 300;
     margin-bottom: 10px;
 }
-.about-contact > .about-contact-container >.about-contact-list > .contact-item > ul > li{
+#about-contact > .about-contact-container >.about-contact-list > .contact-item > ul > li{
     margin-bottom: 100px;
 }
 
-.about-contact > .about-contact-container >.about-contact-list > .contact-item > ul > li >  .title{
+#about-contact > .about-contact-container >.about-contact-list > .contact-item > ul > li >  .title{
     font-size: 1.4em;
     font-weight: 700;
     margin-bottom: 20px;
 }
 
-.about-contact > .about-contact-container > input{
+#about-contact > .about-contact-container > input{
     display: none;
 }
-.about-contact > .about-contact-container > .about-contact-list > .item{
+#about-contact > .about-contact-container > .about-contact-list > .item{
     display: none;
 }
-.about-contact > .about-contact-container > #about:checked ~ .about-contact-list>.about-item,
-.about-contact > .about-contact-container > #contact:checked ~ .about-contact-list>.contact-item{
+#about-contact > .about-contact-container > #about:checked ~ .about-contact-list>.about-item,
+#about-contact > .about-contact-container > #contact:checked ~ .about-contact-list>.contact-item{
     display: block;
 }
-.about-contact > .about-contact-container > .about-contact-list > .about-item > .img-banner{
+#about-contact > .about-contact-container > .about-contact-list > .about-item > .img-banner{
     display: flex;
 }
-.about-contact > .about-contact-container > .about-contact-list > .about-item > .img-banner > .left{
+#about-contact > .about-contact-container > .about-contact-list > .about-item > .img-banner > .left{
     max-width: 50%;
     padding-right: 2%;
     border-right: 1px solid gainsboro;
 }
-.about-contact > .about-contact-container > .about-contact-list > .about-item > .img-banner > .left > img{
+#about-contact > .about-contact-container > .about-contact-list > .about-item > .img-banner > .left > img{
     width: 100%;
 }
-.about-contact > .about-contact-container > .about-contact-list > .about-item > .img-banner > .right{
+#about-contact > .about-contact-container > .about-contact-list > .about-item > .img-banner > .right{
     padding-left: 2%;
     border-left: 1px solid gainsboro;
     max-width: 50%;
 }
-.about-contact > .about-contact-container > .about-contact-list > .about-item > .img-banner > .right > div > .title{
+#about-contact > .about-contact-container > .about-contact-list > .about-item > .img-banner > .right > div > .title{
     font-weight: 700;
 }
-.about-contact > .about-contact-container > .about-contact-list > .about-item > .img-banner > .right > div > p{
+#about-contact > .about-contact-container > .about-contact-list > .about-item > .img-banner > .right > div > p{
     font-size: 1.4em;
     line-height: 1em;
     font-weight: 300;
